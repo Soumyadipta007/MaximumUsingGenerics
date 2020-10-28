@@ -117,5 +117,29 @@ namespace UnitTestProject1
             string maxString = FindMaxGenericClass<string>.GetMaxValue(arr);
             Assert.AreEqual("Peach", maxString);
         }
+        [TestMethod]
+        public void FindingMaxNumberUsingGenericsClassAndGenericMethod()
+        {
+            int[] arr = { 10, 20, 30 };
+            FindMaxGenericClass<int> findMaxGenericClass = new FindMaxGenericClass<int>(10,20,30,arr);
+            int maxNumber = findMaxGenericClass.testMaximum();
+            Assert.AreEqual(30, maxNumber);
+        }
+        [TestMethod]
+        public void FindingMaxFloatNumberUsingGenericsClassAndGenericMethod()
+        {
+            double[] arr = { 10.0, 20.0, 30.0 };
+            FindMaxGenericClass<double> findMaxGenericClass = new FindMaxGenericClass<double>(10.0, 20.0, 30.0, arr);
+            double maxNumber = findMaxGenericClass.testMaximum();
+            Assert.AreEqual(30.0, maxNumber);
+        }
+        [TestMethod]
+        public void FindingMaxStringUsingGenericsClassAndGenericMethod()
+        {
+            string[] arr = { "Apple", "Peach", "Banana" };
+            FindMaxGenericClass<string> findMaxGenericClass = new FindMaxGenericClass<string>("Apple", "Peach", "Banana", arr);
+            string maxString = findMaxGenericClass.testMaximum();
+            Assert.AreEqual("Peach", maxString);
+        }
     }
 }
