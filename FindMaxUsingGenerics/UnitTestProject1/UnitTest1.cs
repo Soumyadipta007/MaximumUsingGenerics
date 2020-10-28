@@ -39,7 +39,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void FindingMaxFloatNumberAtPosition3()
         {
-            double maxNumber = MaxNumberCheck.MaximumFloatNumber(10, 20, 30);
+            double maxNumber = MaxNumberCheck.MaximumFloatNumber(10.0, 20.0, 30.0);
             Assert.AreEqual(30.0, maxNumber);
         }
         [TestMethod]
@@ -58,6 +58,24 @@ namespace UnitTestProject1
         public void FindingMaxStringAtPosition3()
         {
             string maxString = MaxNumberCheck.MaximumString("Apple", "Peach", "Banana");
+            Assert.AreEqual("Peach", maxString);
+        }
+        [TestMethod]
+        public void FindingMaxNumberUsingGenerics()
+        {
+            int maxNumber = MaxNumberCheck.findMax(10, 20, 30);
+            Assert.AreEqual(30, maxNumber);
+        }
+        [TestMethod]
+        public void FindingMaxFloatNumberUsingGenerics()
+        {
+            double maxNumber = MaxNumberCheck.findMax(10.0, 20.0, 30.0);
+            Assert.AreEqual(30.0, maxNumber);
+        }
+        [TestMethod]
+        public void FindingMaxStringUsingGenerics()
+        {
+            string maxString = MaxNumberCheck.findMax("Apple", "Peach", "Banana");
             Assert.AreEqual("Peach", maxString);
         }
     }
