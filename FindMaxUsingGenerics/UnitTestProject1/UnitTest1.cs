@@ -42,5 +42,23 @@ namespace UnitTestProject1
             double maxNumber = MaxNumberCheck.MaximumFloatNumber(10, 20, 30);
             Assert.AreEqual(30.0, maxNumber);
         }
+        [TestMethod]
+        public void FindingMaxStringAtPosition1()
+        {
+            string maxString = MaxNumberCheck.MaximumString("Banana", "Apple","Peach");
+            Assert.AreEqual("Peach", maxString);
+        }
+        [TestMethod]
+        public void FindingMaxStringAtPosition2()
+        {
+            string maxString = MaxNumberCheck.MaximumString("Apple", "Banana", "Peach");
+            Assert.AreEqual("Peach", maxString);
+        }
+        [TestMethod]
+        public void FindingMaxStringAtPosition3()
+        {
+            string maxString = MaxNumberCheck.MaximumString("Apple", "Peach", "Banana");
+            Assert.AreEqual("Peach", maxString);
+        }
     }
 }
