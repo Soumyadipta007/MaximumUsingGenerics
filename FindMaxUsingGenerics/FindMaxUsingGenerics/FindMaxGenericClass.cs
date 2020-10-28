@@ -9,11 +9,13 @@ namespace FindMaxUsingGenerics
         T first;
         T second;
         T third;
+        T[] value;
         public FindMaxGenericClass(T first,T second,T third)
         {
             this.first = first;
             this.second = second;
             this.third = third;
+            this.value = value;
         }
         public static T testMax(T first, T second, T third)
         {
@@ -36,6 +38,16 @@ namespace FindMaxUsingGenerics
                 return third;
             }
             throw new Exception("first, second and third are same");
+        }
+        public static T MaxValue(params T[] values)
+        {
+            Array.Sort(values);
+            return values[^1];
+        }
+        public static T GetMaxValue(params T[] value)
+        {
+            T max = MaxValue(value);
+            return max;
         }
     }
 }
