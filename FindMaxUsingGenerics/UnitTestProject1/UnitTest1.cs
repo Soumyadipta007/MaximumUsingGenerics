@@ -24,5 +24,23 @@ namespace UnitTestProject1
             int maxNumber = MaxNumberCheck.MaximumIntegerNumber(10, 20, 30);
             Assert.AreEqual(30, maxNumber);
         }
+        [TestMethod]
+        public void FindingMaxFloatNumberAtPosition1()
+        {
+            double maxNumber = MaxNumberCheck.MaximumFloatNumber(30.0, 20.0, 10.0);
+            Assert.AreEqual(30.0, maxNumber);
+        }
+        [TestMethod]
+        public void FindingMaxFloatNumberAtPosition2()
+        {
+            double maxNumber = MaxNumberCheck.MaximumFloatNumber(20.0, 30.0, 10.0);
+            Assert.AreEqual(30.0, maxNumber);
+        }
+        [TestMethod]
+        public void FindingMaxFloatNumberAtPosition3()
+        {
+            double maxNumber = MaxNumberCheck.MaximumFloatNumber(10, 20, 30);
+            Assert.AreEqual(30.0, maxNumber);
+        }
     }
 }
