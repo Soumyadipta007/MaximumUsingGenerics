@@ -78,5 +78,23 @@ namespace UnitTestProject1
             string maxString = MaxNumberCheck.findMax("Apple", "Peach", "Banana");
             Assert.AreEqual("Peach", maxString);
         }
+        [TestMethod]
+        public void FindingMaxNumberUsingGenericsClass()
+        {
+            int maxNumber = FindMaxGenericClass<int>.testMax(10, 20, 30);
+            Assert.AreEqual(30, maxNumber);
+        }
+        [TestMethod]
+        public void FindingMaxFloatNumberUsingGenericsClass()
+        {
+            double maxNumber = FindMaxGenericClass<double>.testMax(10.0, 20.0, 30.0);
+            Assert.AreEqual(30.0, maxNumber);
+        }
+        [TestMethod]
+        public void FindingMaxStringUsingGenericsClass()
+        {
+            string maxString = FindMaxGenericClass<string>.testMax("Apple", "Peach", "Banana");
+            Assert.AreEqual("Peach", maxString);
+        }
     }
 }
